@@ -41,7 +41,9 @@ fn run_gradle() -> Result<()> {
         println!("*** Running gradle");
         let mut cmd = if cfg!(windows) {
             let mut cmd = Command::new("cmd");
-            cmd.args(["/c", "gradlew.bat"]);
+            // Use an explicit `.\` path: a bare `gradlew.bat` is not resolved from
+            // the current directory when NoDefaultCurrentDirectoryInExePath is set.
+            cmd.args(["/c", ".\\gradlew.bat"]);
             cmd
         } else {
             Command::new("./gradlew")
