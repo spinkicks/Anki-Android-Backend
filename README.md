@@ -1,3 +1,8 @@
+<!-- SPEEDRUN FORK NOTE -->
+> **This is a fork used by the Speedrun project** — an honest GRE Mathematics Subject Test trainer built **on Anki** (desktop + Android sharing one Rust engine). This repo cross-compiles the Speedrun `rslib` (from the `spinkicks/anki` fork, `rslib/src/speedrun/`) into the JNI AAR that AnkiDroid consumes with `local_backend=true`, and bundles the shared SvelteKit pages. Project hub: `spinkicks/speedrun`. All credit for rsdroid/AnkiDroid-Backend goes to the AnkiDroid team; the original README follows.
+
+---
+
 # AnkiDroid-Backend
 
 An interface for accessing Anki Desktop's Rust backend inside AnkiDroid. This
